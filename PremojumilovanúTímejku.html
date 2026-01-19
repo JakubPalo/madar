@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darťek</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(#314d80, #1c2f4a);
+      color: white;
+      overflow-x: hidden;
+    }
+
+
+    @keyframes snow {
+      0% { transform: translateY(-10px); opacity: 1; }
+      100% { transform: translateY(800px); opacity: 0; }
+    }
+
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .snow span {
+      position: absolute;
+      top: -10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      filter: blur(1px);
+      animation: snow linear infinite;
+    }
+    .lights {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .lights span {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      background: gold;
+      border-radius: 50%;
+      margin: 0 8px;
+      box-shadow: 0 0 10px gold;
+      animation: flicker 1.5s infinite ease-in-out alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .hero button {
+      margin-top: 18px;
+      background: #d9b95b;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px gold;
+    }
+    .message-card {
+      background: #f7f4ee;
+      color: #233a62;
+      width: 80%;
+      max-width: 700px;
+      margin: 70px auto;
+      padding: 30px 40px;
+      border-radius: 20px;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .message-card img {
+      width: 90px;
+    }
+
+    .message-card h3 {
+      font-size: 1.6rem;
+      margin-top: 0;
+    }
+
+    .message-card p {
+      font-size: 1.05rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="snow">
+    <script>
+      const snow = document.querySelector('.snow');
+      for (let i = 0; i < 60; i++) {
+        const flake = document.createElement('span');
+        const size = Math.random() * 4 + 2;
+        flake.style.width = size + 'px';
+        flake.style.height = size + 'px';
+        flake.style.left = Math.random() * window.innerWidth + 'px';
+        flake.style.animationDuration = 6 + Math.random() * 4 + 's';
+        flake.style.animationDelay = Math.random() * 5 + 's';
+        snow.appendChild(flake);
+      }
+    </script>
+  </div>
+  <div class="lights">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="hero">
+    <h1>Šťastné a Veselé, Milaťiiiik 💙</h1>
+    <h2>Si ten najlepší darťek ťo som mohol kedy dostať</h2>
+    <p>Prajem ti šťastné a veselé Vianoce plné lásky, radosti a veľa skvelích darťekov.</p>
+    <button onclick="window.location.href='https:/www.youtube.com/watch?v=8ScAnaU0FFE'">Klikni!</button>
+  </div>
+
+  <div class="message-card">
+    
+
+    <div>
+      <h3>Pre moje milované dievťatko,</h3>
+      <p>
+        Dúfam, že ti tieto Vianoce prinesú všetko, ťo si tvoje srdieťko želá.
+        Si svetielko môjho života. Moja láska môj pokladík a predovšetkým MOJA Tímejka.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
