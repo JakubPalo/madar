@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Change overall background to black */
+            color: #fff; /* Change text color to white */
+        }
+        header {
+            background: #000; /* Change header background to black */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .blog-post {
+            border: 1px solid #6a0dad; /* Change border to purple */
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            background-color: #000; /* Change background to black */
+            color: #fff; /* Ensure text is white on black background */
+        }
+        .blog-post:first-of-type {
+            background-color: #000; /* Change first blog post background to black */
+            color: #fff;
+        }
+        .blog-post:nth-of-type(2),
+        .blog-post:nth-of-type(3) {
+            background-color: #000; /* Change second and third blog post background to black */
+            color: #fff;
+        }
+        .blog-post:nth-of-type(1),
+        .blog-post:nth-of-type(2),
+        .blog-post:nth-of-type(3) {
+            color: #6a0dad; /* Change text color to purple */
+        }
+        .blog-post h3 {
+            margin-top: 0;
+            color: #ff4655;
+        }
+        .blog-post:nth-of-type(1) h3,
+        .blog-post:nth-of-type(2) h3,
+        .blog-post:nth-of-type(3) h3 {
+            color: #6a0dad; /* Change heading color to purple */
+        }
+        .blog-post p {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    
+    <nav>
+        <a href="#home">Domov</a>
+        <a href="#about">O mne</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Domov</h2>
+            <p>Vitajte na mojej webovej stránke!</p>
+        </section>
+
+        <section id="about">
+            <h2>O mne</h2>
+            <p>Volám sa [Vaše meno] a toto je moja osobná stránka.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Ak ma chcete kontaktovať, napíšte mi na email: <a href="mailto:example@example.com">example@example.com</a>.</p>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <article class="blog-post">
+                <h3>Prvý príspevok</h3>
+                <p>Dátum: 9. február 2026</p>
+                <p>Toto je ukážkový obsah pre váš prvý blogový príspevok. Môžete sem pridať text, obrázky alebo čokoľvek, čo chcete zdieľať so svojimi čitateľmi.</p>
+            </article>
+
+            <article class="blog-post">
+                <h3>Druhý príspevok</h3>
+                <p>Dátum: 8. február 2026</p>
+                <p>Tu je ďalší príklad blogového príspevku. Môžete písať o svojich zážitkoch, nápadoch alebo novinkách.</p>
+            </article>
+
+            <article class="blog-post">
+                <h3>Tretí príspevok</h3>
+                <p>Dátum: 7. február 2026</p>
+                <p>Nezabudnite pravidelne aktualizovať svoj blog, aby ste udržali svojich čitateľov informovaných a zaujatých.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 New Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
